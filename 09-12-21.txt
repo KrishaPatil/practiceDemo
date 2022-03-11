@@ -1,0 +1,2210 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 16
+Server version: 8.0.15 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> show full tables;
++----------------+------------+
+| Tables_in_demo | Table_type |
++----------------+------------+
+| a              | BASE TABLE |
+| agent          | BASE TABLE |
+| andor          | BASE TABLE |
+| apple          | BASE TABLE |
+| apple1         | BASE TABLE |
+| b              | BASE TABLE |
+| blanktablea    | BASE TABLE |
+| blanktableb    | BASE TABLE |
+| blog           | BASE TABLE |
+| bonus          | BASE TABLE |
+| books          | BASE TABLE |
+| candidate      | BASE TABLE |
+| child          | BASE TABLE |
+| client         | BASE TABLE |
+| coalesce       | BASE TABLE |
+| comments       | BASE TABLE |
+| company        | BASE TABLE |
+| customer       | BASE TABLE |
+| customers      | BASE TABLE |
+| demodept1      | BASE TABLE |
+| demodept2      | BASE TABLE |
+| dept           | BASE TABLE |
+| dept1          | BASE TABLE |
+| docs           | BASE TABLE |
+| dummy          | BASE TABLE |
+| duplicate      | BASE TABLE |
+| e              | BASE TABLE |
+| e1             | BASE TABLE |
+| e3             | BASE TABLE |
+| e4             | BASE TABLE |
+| emp            | BASE TABLE |
+| emp1           | BASE TABLE |
+| emp2           | BASE TABLE |
+| emp_cards      | BASE TABLE |
+| emp_phone      | BASE TABLE |
+| employee       | BASE TABLE |
+| employee1      | BASE TABLE |
+| envelope       | BASE TABLE |
+| fifa           | BASE TABLE |
+| food           | BASE TABLE |
+| hobby          | BASE TABLE |
+| item           | BASE TABLE |
+| key_parts      | BASE TABLE |
+| licence        | BASE TABLE |
+| location       | BASE TABLE |
+| mass_table     | BASE TABLE |
+| menucard       | BASE TABLE |
+| nearest        | BASE TABLE |
+| new            | BASE TABLE |
+| newbooks       | BASE TABLE |
+| nullif         | BASE TABLE |
+| nz             | BASE TABLE |
+| ord            | BASE TABLE |
+| orders         | BASE TABLE |
+| parent         | BASE TABLE |
+| points         | BASE TABLE |
+| price          | BASE TABLE |
+| product        | BASE TABLE |
+| products       | BASE TABLE |
+| r1             | BASE TABLE |
+| r2             | BASE TABLE |
+| races          | BASE TABLE |
+| regexpr        | BASE TABLE |
+| replacedept    | BASE TABLE |
+| revenue        | BASE TABLE |
+| runners        | BASE TABLE |
+| sales          | VIEW       |
+| sales_channel  | BASE TABLE |
+| salespeople    | BASE TABLE |
+| salesperson    | BASE TABLE |
+| salgrade       | BASE TABLE |
+| seta           | BASE TABLE |
+| setb           | BASE TABLE |
+| softdrink      | BASE TABLE |
+| sort           | BASE TABLE |
+| stadium        | BASE TABLE |
+| states         | BASE TABLE |
+| station        | BASE TABLE |
+| status         | BASE TABLE |
+| tablea         | BASE TABLE |
+| tableaa        | BASE TABLE |
+| tableb         | BASE TABLE |
+| tablebb        | BASE TABLE |
+| tasks          | BASE TABLE |
+| temp1          | BASE TABLE |
+| tt             | BASE TABLE |
+| v1             | VIEW       |
+| votes          | BASE TABLE |
+| warehouse      | BASE TABLE |
+| z              | BASE TABLE |
++----------------+------------+
+90 rows in set (0.02 sec)
+
+mysql> drop view v1;
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> select job, count(*) "Total Records" from emp group by job;
++-----------+---------------+
+| job       | Total Records |
++-----------+---------------+
+| CLERK     |             6 |
+| SALESMAN  |             6 |
+| MANAGER   |             5 |
+| ANALYST   |             2 |
+| PRESIDENT |             1 |
++-----------+---------------+
+5 rows in set (0.01 sec)
+
+mysql> create view v1 as select job, count(*) "Total Records" from emp group by job;
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select * from v1;
++-----------+---------------+
+| job       | Total Records |
++-----------+---------------+
+| CLERK     |             6 |
+| SALESMAN  |             6 |
+| MANAGER   |             5 |
+| ANALYST   |             2 |
+| PRESIDENT |             1 |
++-----------+---------------+
+5 rows in set (0.03 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> create table d select * from dept;
+Query OK, 6 rows affected (0.44 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   |     | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from d;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> create or replace view v1 as select * from d;
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> create view v1 as select * from d;
+ERROR 1050 (42S01): Table 'v1' already exists
+mysql>
+mysql> create or replace view v1 as select * from d;
+Query OK, 0 rows affected (0.34 sec)
+
+mysql> select * from d;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from v1;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> alter table d add c1 int;
+Query OK, 0 rows affected (0.38 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   |     | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from v1;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> create or replace view v1 as select * from d;
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select * from d;
++--------+------------+----------+------------+------+
+| DEPTNO | DNAME      | LOC      | PWD        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> select * from v1;
++--------+------------+----------+------------+------+
+| DEPTNO | DNAME      | LOC      | PWD        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> alter table d drop column c1;
+Query OK, 0 rows affected (0.95 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   |     | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> desc v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql> select * from v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> create or replace view v2 as select * from emp;
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> select * from v2;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> show create view v2;
++------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| View | Create View                                                                                                                                                                                                                                                                                                                                                                                                                                            | character_set_client | collation_connection |
++------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| v2   | CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v2` AS select `emp`.`EMPNO` AS `EMPNO`,`emp`.`ENAME` AS `ENAME`,`emp`.`JOB` AS `JOB`,`emp`.`MGR` AS `MGR`,`emp`.`HIREDATE` AS `HIREDATE`,`emp`.`sal` AS `sal`,`emp`.`COMM` AS `COMM`,`emp`.`DEPTNO` AS `DEPTNO`,`emp`.`BONUSID` AS `BONUSID`,`emp`.`USER NAME` AS `USER NAME`,`emp`.`PWD` AS `PWD`,`emp`.`phone` AS `phone`,`emp`.`isActive` AS `isActive` from `emp` | cp850                | cp850_general_ci     |
++------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+1 row in set (0.02 sec)
+
+mysql> select * vfom v1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'vfom v1' at line 1
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   |     | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> show create view v1;
++------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| View | Create View                                                                                                                                                                                                    | character_set_client | collation_connection |
++------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| v1   | CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v1` AS select `d`.`DEPTNO` AS `DEPTNO`,`d`.`DNAME` AS `DNAME`,`d`.`LOC` AS `LOC`,`d`.`PWD` AS `PWD`,`d`.`c1` AS `c1` from `d` | cp850                | cp850_general_ci     |
++------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql> alter table d add c1 int;
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>
+mysql> select * from v1;
++--------+------------+----------+------------+------+
+| DEPTNO | DNAME      | LOC      | PWD        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> drop table d;
+Query OK, 0 rows affected (0.30 sec)
+
+mysql> select * from v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql> select * from v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql> show full tables;
++----------------+------------+
+| Tables_in_demo | Table_type |
++----------------+------------+
+| a              | BASE TABLE |
+| agent          | BASE TABLE |
+| andor          | BASE TABLE |
+| apple          | BASE TABLE |
+| apple1         | BASE TABLE |
+| b              | BASE TABLE |
+| blanktablea    | BASE TABLE |
+| blanktableb    | BASE TABLE |
+| blog           | BASE TABLE |
+| bonus          | BASE TABLE |
+| books          | BASE TABLE |
+| candidate      | BASE TABLE |
+| child          | BASE TABLE |
+| client         | BASE TABLE |
+| coalesce       | BASE TABLE |
+| comments       | BASE TABLE |
+| company        | BASE TABLE |
+| customer       | BASE TABLE |
+| customers      | BASE TABLE |
+| demodept1      | BASE TABLE |
+| demodept2      | BASE TABLE |
+| dept           | BASE TABLE |
+| dept1          | BASE TABLE |
+| docs           | BASE TABLE |
+| dummy          | BASE TABLE |
+| duplicate      | BASE TABLE |
+| e              | BASE TABLE |
+| e1             | BASE TABLE |
+| e3             | BASE TABLE |
+| e4             | BASE TABLE |
+| emp            | BASE TABLE |
+| emp1           | BASE TABLE |
+| emp2           | BASE TABLE |
+| emp_cards      | BASE TABLE |
+| emp_phone      | BASE TABLE |
+| employee       | BASE TABLE |
+| employee1      | BASE TABLE |
+| envelope       | BASE TABLE |
+| fifa           | BASE TABLE |
+| food           | BASE TABLE |
+| hobby          | BASE TABLE |
+| item           | BASE TABLE |
+| key_parts      | BASE TABLE |
+| licence        | BASE TABLE |
+| location       | BASE TABLE |
+| mass_table     | BASE TABLE |
+| menucard       | BASE TABLE |
+| nearest        | BASE TABLE |
+| new            | BASE TABLE |
+| newbooks       | BASE TABLE |
+| nullif         | BASE TABLE |
+| nz             | BASE TABLE |
+| ord            | BASE TABLE |
+| orders         | BASE TABLE |
+| parent         | BASE TABLE |
+| points         | BASE TABLE |
+| price          | BASE TABLE |
+| product        | BASE TABLE |
+| products       | BASE TABLE |
+| r1             | BASE TABLE |
+| r2             | BASE TABLE |
+| races          | BASE TABLE |
+| regexpr        | BASE TABLE |
+| replacedept    | BASE TABLE |
+| revenue        | BASE TABLE |
+| runners        | BASE TABLE |
+| sales          | VIEW       |
+| sales_channel  | BASE TABLE |
+| salespeople    | BASE TABLE |
+| salesperson    | BASE TABLE |
+| salgrade       | BASE TABLE |
+| seta           | BASE TABLE |
+| setb           | BASE TABLE |
+| softdrink      | BASE TABLE |
+| sort           | BASE TABLE |
+| stadium        | BASE TABLE |
+| states         | BASE TABLE |
+| station        | BASE TABLE |
+| status         | BASE TABLE |
+| tablea         | BASE TABLE |
+| tableaa        | BASE TABLE |
+| tableb         | BASE TABLE |
+| tablebb        | BASE TABLE |
+| tasks          | BASE TABLE |
+| temp1          | BASE TABLE |
+| tt             | BASE TABLE |
+| v1             | VIEW       |
+| v2             | VIEW       |
+| votes          | BASE TABLE |
+| warehouse      | BASE TABLE |
+| z              | BASE TABLE |
++----------------+------------+
+91 rows in set (0.00 sec)
+
+mysql>  select deptno,dname,loc,pwd,`c1` from dept
+    -> ;
+ERROR 1054 (42S22): Unknown column 'c1' in 'field list'
+mysql> select deptno, dname, loc, pwd, null from dept;
++--------+------------+----------+------------+------+
+| deptno | dname      | loc      | pwd        | NULL |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.02 sec)
+
+mysql> select deptno, dname, loc, pwd, null c1 from dept;
++--------+------------+----------+------------+------+
+| deptno | dname      | loc      | pwd        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> select deptno, dname, loc, pwd, 'saleel' c1 from dept;
++--------+------------+----------+------------+--------+
+| deptno | dname      | loc      | pwd        | c1     |
++--------+------------+----------+------------+--------+
+|      1 | 1          | 1        | 1          | saleel |
+|      2 | 2          | 2        | 2          | saleel |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | saleel |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | saleel |
+|     30 | SALES      | CHICAGO  | sales@2017 | saleel |
+|     40 | OPERATIONS | BOSTON   | opr@123    | saleel |
++--------+------------+----------+------------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select deptno, dname, loc, pwd, null c1 from dept;
++--------+------------+----------+------------+------+
+| deptno | dname      | loc      | pwd        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> create table d as select deptno, dname, loc, pwd, null c1 from dept;
+Query OK, 6 rows affected (0.36 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(11)     | NO   |     | NULL    |       |
+| dname  | varchar(12) | YES  |     | NULL    |       |
+| loc    | varchar(10) | YES  |     | NULL    |       |
+| pwd    | varchar(20) | YES  |     | NULL    |       |
+| c1     | binary(0)   | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table d modify c1 int;
+Query OK, 6 rows affected (1.08 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(11)     | NO   |     | NULL    |       |
+| dname  | varchar(12) | YES  |     | NULL    |       |
+| loc    | varchar(10) | YES  |     | NULL    |       |
+| pwd    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from v1;
++--------+------------+----------+------------+------+
+| DEPTNO | DNAME      | LOC      | PWD        | c1   |
++--------+------------+----------+------------+------+
+|      1 | 1          | 1        | 1          | NULL |
+|      2 | 2          | 2        | 2          | NULL |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
++--------+------------+----------+------------+------+
+6 rows in set (0.00 sec)
+
+mysql> drop table d;
+Query OK, 0 rows affected (0.31 sec)
+
+mysql>  select deptno, dname, loc, pwd, 0 c1 from dept;
++--------+------------+----------+------------+----+
+| deptno | dname      | loc      | pwd        | c1 |
++--------+------------+----------+------------+----+
+|      1 | 1          | 1        | 1          |  0 |
+|      2 | 2          | 2        | 2          |  0 |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |  0 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |  0 |
+|     30 | SALES      | CHICAGO  | sales@2017 |  0 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |  0 |
++--------+------------+----------+------------+----+
+6 rows in set (0.00 sec)
+
+mysql> select * from v1;
+ERROR 1356 (HY000): View 'demo.v1' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+mysql>
+mysql>
+mysql> create table d as select deptno, dname, loc, pwd, 0 c1 from dept;
+Query OK, 6 rows affected (0.67 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(11)     | NO   |     | NULL    |       |
+| dname  | varchar(12) | YES  |     | NULL    |       |
+| loc    | varchar(10) | YES  |     | NULL    |       |
+| pwd    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(1)      | NO   |     | 0       |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.10 sec)
+
+mysql> select * from v1;
++--------+------------+----------+------------+----+
+| DEPTNO | DNAME      | LOC      | PWD        | c1 |
++--------+------------+----------+------------+----+
+|      1 | 1          | 1        | 1          |  0 |
+|      2 | 2          | 2        | 2          |  0 |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |  0 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |  0 |
+|     30 | SALES      | CHICAGO  | sales@2017 |  0 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |  0 |
++--------+------------+----------+------------+----+
+6 rows in set (0.03 sec)
+
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(11)     | NO   |     | NULL    |       |
+| dname  | varchar(12) | YES  |     | NULL    |       |
+| loc    | varchar(10) | YES  |     | NULL    |       |
+| pwd    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(1)      | NO   |     | 0       |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc v1;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   |     | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(1)      | NO   |     | 0       |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> insert into v1 values(1,1,1,1,1);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from d;'
++--------+------------+----------+------------+----+
+| deptno | dname      | loc      | pwd        | c1 |
++--------+------------+----------+------------+----+
+|      1 | 1          | 1        | 1          |  0 |
+|      2 | 2          | 2        | 2          |  0 |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |  0 |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |  0 |
+|     30 | SALES      | CHICAGO  | sales@2017 |  0 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |  0 |
+|      1 | 1          | 1        | 1          |  1 |
++--------+------------+----------+------------+----+
+7 rows in set (0.00 sec)
+
+    '> ^C
+mysql> desc d;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| deptno | int(11)     | NO   |     | NULL    |       |
+| dname  | varchar(12) | YES  |     | NULL    |       |
+| loc    | varchar(10) | YES  |     | NULL    |       |
+| pwd    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(1)      | NO   |     | 0       |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql> select * from v2;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.02 sec)
+
+mysql> drop view v1, v2;
+Query OK, 0 rows affected (0.43 sec)
+
+mysql> select * from emp, dept where emp.deptno=dept.deptno;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+--------+------------+----------+------------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive | DEPTNO | DNAME      | LOC      | PWD        |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+--------+------------+----------+------------+
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |     30 | SALES      | CHICAGO  | sales@2017 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |     30 | SALES      | CHICAGO  | sales@2017 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+--------+------------+----------+------------+
+20 rows in set (0.03 sec)
+
+mysql> create view v1 as select * from emp, dept where emp.deptno=dept.deptno;
+ERROR 1060 (42S21): Duplicate column name 'DEPTNO'
+mysql>
+mysql>
+mysql> create view v1 as select * from emp natural join dept;
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> show create view v1;
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| View | Create View                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | character_set_client | collation_connection |
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| v1   | CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v1` AS select `emp`.`DEPTNO` AS `DEPTNO`,`emp`.`PWD` AS `PWD`,`emp`.`EMPNO` AS `EMPNO`,`emp`.`ENAME` AS `ENAME`,`emp`.`JOB` AS `JOB`,`emp`.`MGR` AS `MGR`,`emp`.`HIREDATE` AS `HIREDATE`,`emp`.`sal` AS `sal`,`emp`.`COMM` AS `COMM`,`emp`.`BONUSID` AS `BONUSID`,`emp`.`USER NAME` AS `USER NAME`,`emp`.`phone` AS `phone`,`emp`.`isActive` AS `isActive`,`dept`.`DNAME` AS `DNAME`,`dept`.`LOC` AS `LOC` from (`emp` join `dept` on(((`emp`.`DEPTNO` = `dept`.`DEPTNO`) and (`emp`.`PWD` = `dept`.`PWD`)))) | cp850                | cp850_general_ci     |
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from v1;
+Empty set (0.00 sec)
+
+mysql> desc v1;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| DEPTNO    | int(11)     | NO   |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| EMPNO     | int(11)     | NO   |     | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int(11)     | YES  |     | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| BONUSID   | int(11)     | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| phone     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
+| DNAME     | varchar(12) | YES  |     | NULL    |       |
+| LOC       | varchar(10) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+15 rows in set (0.00 sec)
+
+mysql> show create view v1;
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| View | Create View                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | character_set_client | collation_connection |
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+| v1   | CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `v1` AS select `emp`.`DEPTNO` AS `DEPTNO`,`emp`.`PWD` AS `PWD`,`emp`.`EMPNO` AS `EMPNO`,`emp`.`ENAME` AS `ENAME`,`emp`.`JOB` AS `JOB`,`emp`.`MGR` AS `MGR`,`emp`.`HIREDATE` AS `HIREDATE`,`emp`.`sal` AS `sal`,`emp`.`COMM` AS `COMM`,`emp`.`BONUSID` AS `BONUSID`,`emp`.`USER NAME` AS `USER NAME`,`emp`.`phone` AS `phone`,`emp`.`isActive` AS `isActive`,`dept`.`DNAME` AS `DNAME`,`dept`.`LOC` AS `LOC` from (`emp` join `dept` on(((`emp`.`DEPTNO` = `dept`.`DEPTNO`) and (`emp`.`PWD` = `dept`.`PWD`)))) | cp850                | cp850_general_ci     |
++------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+----------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+20 rows in set (0.00 sec)
+
+mysql> insert into v1(EMPNO,ENAME, JOB, MGR,HIREDATE,sal,COMM,DEPTNO,BONUSID,`USER NAME`,PWD,phone,isActive ) values(1,'saleel','manager',7788,now(),-1,-1,10,-1,'saleel','ddd',1234,1);
+Query OK, 1 row affected, 1 warning (0.07 sec)
+
+mysql> desc dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   | PRI | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+21 rows in set (0.00 sec)
+
+mysql> create table d1 (c1 int, c2 int invisible);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'invisible)' at line 1
+mysql>
+mysql>
+mysql>
+mysql> select version();
++-----------+
+| version() |
++-----------+
+| 8.0.15    |
++-----------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql>
+mysql>
+mysql> create view v3 as select * from emp where deptno=10;
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+21 rows in set (0.00 sec)
+
+mysql> select * from emp order by deptno;
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+21 rows in set (0.00 sec)
+
+mysql> select * from emp where deptno=10;;
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7415 | AARAV  | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+6 rows in set (0.00 sec)
+
+ERROR:
+No query specified
+
+mysql> select * from emp where deptno=20;
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH | CLERK   | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7566 | JONES | MANAGER | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT | ANALYST | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS | CLERK   | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD  | ANALYST | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from emp where deptno=30;
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB      | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7499 | ALLEN   | SALESMAN | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER  | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK    | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER  | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7945 | AARUSH  | SALESMAN | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER  | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+10 rows in set (0.00 sec)
+
+mysql>
+mysql> create view emp10 as select * from emp where deptno=10;
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> create view emp20 as select * from emp where deptno=20;
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> create view emp30 as select * from emp where deptno=30;
+Query OK, 0 rows affected (0.21 sec)
+
+mysql>
+mysql>
+mysql> select * from emp10;
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7415 | AARAV  | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+6 rows in set (0.00 sec)
+
+mysql>
+mysql> select * from emp20;
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7369 | SMITH | CLERK   | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7566 | JONES | MANAGER | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT | ANALYST | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS | CLERK   | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD  | ANALYST | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from emp30;
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB      | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7499 | ALLEN   | SALESMAN | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER  | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK    | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER  | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7945 | AARUSH  | SALESMAN | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER  | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+10 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> insert into emp10(empno, ename, job, mgr,sal,deptno,isactive) values(2,'sharmin','manager',7788,45000,20,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from emp10;
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel | manager   | 7788 | 2021-12-09 |   -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|  7415 | AARAV  | CLERK     | 7902 | 1981-12-31 | 3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS | CLERK     | 7920 | 1981-07-19 | 1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
++-------+--------+-----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from emp20;
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB     | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     2 | sharmin | manager | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7369 | SMITH   | CLERK   | 7902 | 1980-12-17 |   800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7566 | JONES   | MANAGER | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK   | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST | 7566 | 1981-12-03 |  3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+6 rows in set (0.00 sec)
+
+mysql> create or replace view emp10 as select * from emp where deptno=10 with check option;
+Query OK, 0 rows affected (0.24 sec)
+
+mysql> insert into emp10(empno, ename, job, mgr,sal,deptno,isactive) values(3,'ruhan','manager',7788,15000, 20, 1);
+ERROR 1369 (HY000): CHECK OPTION failed 'demo.emp10'
+mysql> insert into emp10(empno, ename, job, mgr,sal,deptno,isactive) values(3,'ruhan','manager',7788,15000, 10, 1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from emp10;
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     3 | ruhan  | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7415 | AARAV  | CLERK     | 7902 | 1981-12-31 |  3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS | CLERK     | 7920 | 1981-07-19 |  1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 |  1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+7 rows in set (0.00 sec)
+
+mysql> select * from emp20;
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB     | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     2 | sharmin | manager | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7369 | SMITH   | CLERK   | 7902 | 1980-12-17 |   800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7566 | JONES   | MANAGER | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK   | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST | 7566 | 1981-12-03 |  3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from emp30;
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB      | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7499 | ALLEN   | SALESMAN | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER  | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK    | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER  | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7945 | AARUSH  | SALESMAN | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER  | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+10 rows in set (0.00 sec)
+
+mysql> drop view emp10,emp20,emp30;
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> select * from emp;
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager   | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |   800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 |  3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 |  1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 |  1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 |  1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 |  1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 |  1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |   950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 |  3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 |  2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 |  1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 |  1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+23 rows in set (0.00 sec)
+
+mysql> explain select * from emp;
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   23 |   100.00 | NULL  |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------+
+1 row in set, 1 warning (0.02 sec)
+
+mysql>
+mysql> select * from emp where job='manager';
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB     | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7949 | ALEX    | MANAGER | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+8 rows in set (0.00 sec)
+
+mysql> explain select * from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   23 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from emp where empno=7788;
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME | JOB     | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7788 | SCOTT | ANALYST | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
++-------+-------+---------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+1 row in set (0.00 sec)
+
+mysql> explain select * from emp where empno=7788;
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+| id | select_type | table | partitions | type  | possible_keys | key     | key_len | ref   | rows | filtered | Extra |
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | const | PRIMARY       | PRIMARY | 4       | const |    1 |   100.00 | NULL  |
++----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.02 sec)
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int(11)     | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int(11)     | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| DEPTNO    | int(11)     | NO   | MUL | NULL    |       |
+| BONUSID   | int(11)     | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| phone     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+13 rows in set (0.00 sec)
+
+mysql> explain select * from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   23 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> create index ind1 on emp(job);
+Query OK, 0 rows affected (0.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> explain select * from emp where job='manager';
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref   | rows | filtered | Extra |
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | ref  | ind1          | ind1 | 83      | const |    8 |   100.00 | NULL  |
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from emp where job='manager';
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB     | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7949 | ALEX    | MANAGER | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+8 rows in set (0.00 sec)
+
+mysql> select * from emp where deptno=30;
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB      | MGR  | HIREDATE   | sal  | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+|  7499 | ALLEN   | SALESMAN | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER  | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK    | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER  | 7566 | 1982-03-24 | 4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN | 7919 | 1980-02-14 | 2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7945 | AARUSH  | SALESMAN | 7902 | 1980-02-14 | 1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER  | 7698 | 1982-01-24 | 1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+----------+------+------------+------+------+--------+---------+-----------+------+-------+----------+
+10 rows in set (0.00 sec)
+
+mysql> explain select * from emp where deptno=30;
++----+-------------+-------+------------+------+------------------------+------------------------+---------+-------+------+----------+-------+
+| id | select_type | table | partitions | type | possible_keys          | key                    | key_len | ref   | rows | filtered | Extra |
++----+-------------+-------+------------+------+------------------------+------------------------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | ref  | EMP_FOREIGN_KEY_deptno | EMP_FOREIGN_KEY_deptno | 4       | const |   10 |   100.00 | NULL  |
++----+-------------+-------+------------+------+------------------------+------------------------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from emp where isactive=1;
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager   | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 |  1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 |  1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 |  1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 |  1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |   950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 |  2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+17 rows in set (0.00 sec)
+
+mysql> explain select * from emp where isactive=1;
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref  | rows | filtered | Extra       |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+|  1 | SIMPLE      | emp   | NULL       | ALL  | NULL          | NULL | NULL    | NULL |   23 |    10.00 | Using where |
++----+-------------+-------+------------+------+---------------+------+---------+------+------+----------+-------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> create index ind2 on emp(isactive);
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc emp;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int(11)     | NO   | PRI | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  | MUL | NULL    |       |
+| MGR       | int(11)     | YES  | MUL | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| DEPTNO    | int(11)     | NO   | MUL | NULL    |       |
+| BONUSID   | int(11)     | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| phone     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  | MUL | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+13 rows in set (0.00 sec)
+
+mysql> select * from emp where isactive=1;
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager   | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 |  1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 |  1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 |  1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 |  1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |   950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 |  2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+17 rows in set (0.00 sec)
+
+mysql> explain select * from emp where isactive=1;
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+| id | select_type | table | partitions | type | possible_keys | key  | key_len | ref   | rows | filtered | Extra |
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+|  1 | SIMPLE      | emp   | NULL       | ref  | ind2          | ind2 | 2       | const |   17 |   100.00 | NULL  |
++----+-------------+-------+------------+------+---------------+------+---------+-------+------+----------+-------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> show index from emp;
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name               | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| emp   |          0 | PRIMARY                |            1 | EMPNO       | A         |          20 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_deptno |            1 | DEPTNO      | A         |           3 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_mgr    |            1 | MGR         | A         |           9 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | ind1                   |            1 | JOB         | A         |           5 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | ind2                   |            1 | isActive    | A         |           2 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+5 rows in set (0.20 sec)
+
+mysql>
+mysql> show index from dept;
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| dept  |          0 | PRIMARY  |            1 | DEPTNO      | A         |           4 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
++-------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+1 row in set (0.05 sec)
+
+mysql> show index from emp;
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name               | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| emp   |          0 | PRIMARY                |            1 | EMPNO       | A         |          20 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_deptno |            1 | DEPTNO      | A         |           3 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_mgr    |            1 | MGR         | A         |           9 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | ind1                   |            1 | JOB         | A         |           5 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | ind2                   |            1 | isActive    | A         |           2 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+5 rows in set (0.19 sec)
+
+mysql> drop index ind1 on emp;
+Query OK, 0 rows affected (0.27 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from emp;
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name               | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| emp   |          0 | PRIMARY                |            1 | EMPNO       | A         |          20 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_deptno |            1 | DEPTNO      | A         |           3 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_mgr    |            1 | MGR         | A         |           9 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | ind2                   |            1 | isActive    | A         |           2 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> drop index ind2 on emp;
+Query OK, 0 rows affected (0.25 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from emp;
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| Table | Non_unique | Key_name               | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+| emp   |          0 | PRIMARY                |            1 | EMPNO       | A         |          20 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_deptno |            1 | DEPTNO      | A         |           3 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| emp   |          1 | EMP_FOREIGN_KEY_mgr    |            1 | MGR         | A         |           9 |     NULL |   NULL | YES  | BTREE      |         |               | YES     | NULL       |
++-------+------------+------------------------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+---------+------------+
+3 rows in set (0.00 sec)
+
+mysql> create index ind2 on emp(isactive);
+Query OK, 0 rows affected (0.53 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> use infomation_schema;
+ERROR 1049 (42000): Unknown database 'infomation_schema'
+mysql> use information_schema;
+Database changed
+mysql> show tables;
++---------------------------------------+
+| Tables_in_information_schema          |
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLLATIONS                            |
+| COLUMN_PRIVILEGES                     |
+| COLUMN_STATISTICS                     |
+| COLUMNS                               |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CACHED_INDEXES                 |
+| INNODB_CMP                            |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_COLUMNS                        |
+| INNODB_DATAFILES                      |
+| INNODB_FIELDS                         |
+| INNODB_FOREIGN                        |
+| INNODB_FOREIGN_COLS                   |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_INDEXES                        |
+| INNODB_METRICS                        |
+| INNODB_SESSION_TEMP_TABLESPACES       |
+| INNODB_TABLES                         |
+| INNODB_TABLESPACES                    |
+| INNODB_TABLESPACES_BRIEF              |
+| INNODB_TABLESTATS                     |
+| INNODB_TEMP_TABLE_INFO                |
+| INNODB_TRX                            |
+| INNODB_VIRTUAL                        |
+| KEY_COLUMN_USAGE                      |
+| KEYWORDS                              |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| RESOURCE_GROUPS                       |
+| ROUTINES                              |
+| SCHEMA_PRIVILEGES                     |
+| SCHEMATA                              |
+| ST_GEOMETRY_COLUMNS                   |
+| ST_SPATIAL_REFERENCE_SYSTEMS          |
+| ST_UNITS_OF_MEASURE                   |
+| STATISTICS                            |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLES                                |
+| TABLESPACES                           |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEW_ROUTINE_USAGE                    |
+| VIEW_TABLE_USAGE                      |
+| VIEWS                                 |
++---------------------------------------+
+66 rows in set (0.03 sec)
+
+mysql> use performance_schema;
+Database changed
+mysql> show tables;
++------------------------------------------------------+
+| Tables_in_performance_schema                         |
++------------------------------------------------------+
+| accounts                                             |
+| cond_instances                                       |
+| data_lock_waits                                      |
+| data_locks                                           |
+| events_errors_summary_by_account_by_error            |
+| events_errors_summary_by_host_by_error               |
+| events_errors_summary_by_thread_by_error             |
+| events_errors_summary_by_user_by_error               |
+| events_errors_summary_global_by_error                |
+| events_stages_current                                |
+| events_stages_history                                |
+| events_stages_history_long                           |
+| events_stages_summary_by_account_by_event_name       |
+| events_stages_summary_by_host_by_event_name          |
+| events_stages_summary_by_thread_by_event_name        |
+| events_stages_summary_by_user_by_event_name          |
+| events_stages_summary_global_by_event_name           |
+| events_statements_current                            |
+| events_statements_histogram_by_digest                |
+| events_statements_histogram_global                   |
+| events_statements_history                            |
+| events_statements_history_long                       |
+| events_statements_summary_by_account_by_event_name   |
+| events_statements_summary_by_digest                  |
+| events_statements_summary_by_host_by_event_name      |
+| events_statements_summary_by_program                 |
+| events_statements_summary_by_thread_by_event_name    |
+| events_statements_summary_by_user_by_event_name      |
+| events_statements_summary_global_by_event_name       |
+| events_transactions_current                          |
+| events_transactions_history                          |
+| events_transactions_history_long                     |
+| events_transactions_summary_by_account_by_event_name |
+| events_transactions_summary_by_host_by_event_name    |
+| events_transactions_summary_by_thread_by_event_name  |
+| events_transactions_summary_by_user_by_event_name    |
+| events_transactions_summary_global_by_event_name     |
+| events_waits_current                                 |
+| events_waits_history                                 |
+| events_waits_history_long                            |
+| events_waits_summary_by_account_by_event_name        |
+| events_waits_summary_by_host_by_event_name           |
+| events_waits_summary_by_instance                     |
+| events_waits_summary_by_thread_by_event_name         |
+| events_waits_summary_by_user_by_event_name           |
+| events_waits_summary_global_by_event_name            |
+| file_instances                                       |
+| file_summary_by_event_name                           |
+| file_summary_by_instance                             |
+| global_status                                        |
+| global_variables                                     |
+| host_cache                                           |
+| hosts                                                |
+| log_status                                           |
+| memory_summary_by_account_by_event_name              |
+| memory_summary_by_host_by_event_name                 |
+| memory_summary_by_thread_by_event_name               |
+| memory_summary_by_user_by_event_name                 |
+| memory_summary_global_by_event_name                  |
+| metadata_locks                                       |
+| mutex_instances                                      |
+| objects_summary_global_by_type                       |
+| performance_timers                                   |
+| persisted_variables                                  |
+| prepared_statements_instances                        |
+| replication_applier_configuration                    |
+| replication_applier_filters                          |
+| replication_applier_global_filters                   |
+| replication_applier_status                           |
+| replication_applier_status_by_coordinator            |
+| replication_applier_status_by_worker                 |
+| replication_connection_configuration                 |
+| replication_connection_status                        |
+| replication_group_member_stats                       |
+| replication_group_members                            |
+| rwlock_instances                                     |
+| session_account_connect_attrs                        |
+| session_connect_attrs                                |
+| session_status                                       |
+| session_variables                                    |
+| setup_actors                                         |
+| setup_consumers                                      |
+| setup_instruments                                    |
+| setup_objects                                        |
+| setup_threads                                        |
+| socket_instances                                     |
+| socket_summary_by_event_name                         |
+| socket_summary_by_instance                           |
+| status_by_account                                    |
+| status_by_host                                       |
+| status_by_thread                                     |
+| status_by_user                                       |
+| table_handles                                        |
+| table_io_waits_summary_by_index_usage                |
+| table_io_waits_summary_by_table                      |
+| table_lock_waits_summary_by_table                    |
+| threads                                              |
+| user_defined_functions                               |
+| user_variables_by_thread                             |
+| users                                                |
+| variables_by_thread                                  |
+| variables_info                                       |
++------------------------------------------------------+
+102 rows in set (0.02 sec)
+
+mysql> use mysql
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| component                 |
+| db                        |
+| default_roles             |
+| engine_cost               |
+| func                      |
+| general_log               |
+| global_grants             |
+| gtid_executed             |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| password_history          |
+| plugin                    |
+| procs_priv                |
+| proxies_priv              |
+| role_edges                |
+| server_cost               |
+| servers                   |
+| slave_master_info         |
+| slave_relay_log_info      |
+| slave_worker_info         |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+33 rows in set (0.01 sec)
+
+mysql> use demo;
+Database changed
+mysql> use demo
+Database changed
+mysql> create table tt(c1 int, c2 int);
+ERROR 1050 (42S01): Table 'tt' already exists
+mysql> drop table tt;
+Query OK, 0 rows affected (0.37 sec)
+
+mysql> create table tt(c1 int, c2 int);
+Query OK, 0 rows affected (0.34 sec)
+
+mysql> insert into tt values(10,10);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tt values(100,100);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
++------+------+
+2 rows in set (0.00 sec)
+
+mysql> insert into tt values(111,11);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
++------+------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tt values(12,12);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
++------+------+
+4 rows in set (0.00 sec)
+
+mysql> create index in1 on tt(c1);
+Query OK, 0 rows affected (0.46 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
++------+------+
+4 rows in set (0.00 sec)
+
+mysql> insert into tt values(1,1);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
+|    1 |    1 |
++------+------+
+5 rows in set (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+6 rows in set (0.02 sec)
+
+mysql> insert into dept values(11,11,11,11);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     11 | 11         | 11       | 11         |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+7 rows in set (0.00 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
+|    1 |    1 |
++------+------+
+5 rows in set (0.00 sec)
+
+mysql> insert into tt values(11,11);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from tt;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
+|    1 |    1 |
+|   11 |   11 |
++------+------+
+6 rows in set (0.00 sec)
+
+mysql> select * from tt
+    -> ;
++------+------+
+| c1   | c2   |
++------+------+
+|   10 |   10 |
+|  100 |  100 |
+|  111 |   11 |
+|   12 |   12 |
+|    1 |    1 |
+|   11 |   11 |
++------+------+
+6 rows in set (0.00 sec)
+
+mysql> delimiter $
+mysql> select * from emp;
+    -> ^C
+mysql>
+mysql>
+mysql> select * from emp$
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager   | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |   800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 |  3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 |  1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 |  1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 |  1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 |  1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 |  1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |   950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 |  3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 |  2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 |  1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 |  1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+23 rows in set (0.00 sec)
+
+mysql> select * from dept$
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     11 | 11         | 11       | 11         |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+7 rows in set (0.00 sec)
+
+mysql> delimiter ;
+mysql> select * from dept$
+    -> ^C
+mysql>
+mysql>
+mysql>
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     11 | 11         | 11       | 11         |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+7 rows in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> SET @x := 'manager';
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select @x;
++---------+
+| @x      |
++---------+
+| manager |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select * from emp where job=@x;
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB     | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7919 | HOFFMAN | MANAGER | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7949 | ALEX    | MANAGER | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+---------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+8 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.32 sec)
+
+mysql> call pro1();
++-------------+
+| Hello World |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source d:\abc.sql
+ERROR 1304 (42000): PROCEDURE pro1 already exists
+mysql> select database();
++------------+
+| database() |
++------------+
+| demo       |
++------------+
+1 row in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro1();
++----------------+
+| Message Window |
++----------------+
+| Hello World    |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'default 100)
+begin
+        select x + y;
+end' at line 1
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro2(2,3);
++-------+
+| x + y |
++-------+
+|     5 |
++-------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro2(2, 3, 5);
++-----------+
+| x + y + z |
++-----------+
+|        10 |
++-----------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|      1 | 1          | 1        | 1          |
+|      2 | 2          | 2        | 2          |
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     11 | 11         | 11       | 11         |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+7 rows in set (0.00 sec)
+
+mysql> delete from dept where deptno<10;
+Query OK, 2 rows affected (0.03 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     11 | 11         | 11       | 11         |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> delete from dept where deptno=11;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> desc dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   | PRI | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.02 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.12 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> call pro3(41,'HRD','BARODA','hr^kdi');
++--------------------------+
+| Message Window           |
++--------------------------+
+| Data inserted SUCCESSFUL |
++--------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | HRD        | BARODA   | hr^kdi     |
++--------+------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql>

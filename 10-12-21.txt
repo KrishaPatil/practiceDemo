@@ -1,0 +1,1958 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 17
+Server version: 8.0.15 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> call pro2(1,2,3);
++-----------+
+| x + y + z |
++-----------+
+|         6 |
++-----------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> use information_schems;
+ERROR 1049 (42000): Unknown database 'information_schems'
+mysql> use information_schema;
+Database changed
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
++---------------------------------------+
+| Tables_in_information_schema          |
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLLATIONS                            |
+| COLUMN_PRIVILEGES                     |
+| COLUMN_STATISTICS                     |
+| COLUMNS                               |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CACHED_INDEXES                 |
+| INNODB_CMP                            |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_COLUMNS                        |
+| INNODB_DATAFILES                      |
+| INNODB_FIELDS                         |
+| INNODB_FOREIGN                        |
+| INNODB_FOREIGN_COLS                   |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_INDEXES                        |
+| INNODB_METRICS                        |
+| INNODB_SESSION_TEMP_TABLESPACES       |
+| INNODB_TABLES                         |
+| INNODB_TABLESPACES                    |
+| INNODB_TABLESPACES_BRIEF              |
+| INNODB_TABLESTATS                     |
+| INNODB_TEMP_TABLE_INFO                |
+| INNODB_TRX                            |
+| INNODB_VIRTUAL                        |
+| KEY_COLUMN_USAGE                      |
+| KEYWORDS                              |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| RESOURCE_GROUPS                       |
+| ROUTINES                              |
+| SCHEMA_PRIVILEGES                     |
+| SCHEMATA                              |
+| ST_GEOMETRY_COLUMNS                   |
+| ST_SPATIAL_REFERENCE_SYSTEMS          |
+| ST_UNITS_OF_MEASURE                   |
+| STATISTICS                            |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLES                                |
+| TABLESPACES                           |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEW_ROUTINE_USAGE                    |
+| VIEW_TABLE_USAGE                      |
+| VIEWS                                 |
++---------------------------------------+
+66 rows in set (0.00 sec)
+
+mysql> desc ROUTINES;
++--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-----+---------+-------+
+| Field                    | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Null | Key | Default | Extra |
++--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-----+---------+-------+
+| SPECIFIC_NAME            | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
+| ROUTINE_CATALOG          | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | YES  |     | NULL    |       |
+| ROUTINE_SCHEMA           | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | YES  |     | NULL    |       |
+| ROUTINE_NAME             | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
+| ROUTINE_TYPE             | enum('FUNCTION','PROCEDURE')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | NO   |     | NULL    |       |
+| DATA_TYPE                | longtext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | YES  |     | NULL    |       |
+| CHARACTER_MAXIMUM_LENGTH | bigint(21)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | YES  |     | NULL    |       |
+| CHARACTER_OCTET_LENGTH   | bigint(21)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | YES  |     | NULL    |       |
+| NUMERIC_PRECISION        | int(10) unsigned                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | YES  |     | NULL    |       |
+| NUMERIC_SCALE            | int(10) unsigned                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | YES  |     | NULL    |       |
+| DATETIME_PRECISION       | int(10) unsigned                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | YES  |     | NULL    |       |
+| CHARACTER_SET_NAME       | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | YES  |     | NULL    |       |
+| COLLATION_NAME           | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | YES  |     | NULL    |       |
+| DTD_IDENTIFIER           | longtext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | YES  |     | NULL    |       |
+| ROUTINE_BODY             | varchar(3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | NO   |     |         |       |
+| ROUTINE_DEFINITION       | longtext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | YES  |     | NULL    |       |
+| EXTERNAL_NAME            | binary(0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | YES  |     | NULL    |       |
+| EXTERNAL_LANGUAGE        | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | SQL     |       |
+| PARAMETER_STYLE          | varchar(3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | NO   |     |         |       |
+| IS_DETERMINISTIC         | varchar(3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | NO   |     |         |       |
+| SQL_DATA_ACCESS          | enum('CONTAINS SQL','NO SQL','READS SQL DATA','MODIFIES SQL DATA')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | NO   |     | NULL    |       |
+| SQL_PATH                 | binary(0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | YES  |     | NULL    |       |
+| SECURITY_TYPE            | enum('DEFAULT','INVOKER','DEFINER')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | NO   |     | NULL    |       |
+| CREATED                  | timestamp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | NO   |     | NULL    |       |
+| LAST_ALTERED             | timestamp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | NO   |     | NULL    |       |
+| SQL_MODE                 | set('REAL_AS_FLOAT','PIPES_AS_CONCAT','ANSI_QUOTES','IGNORE_SPACE','NOT_USED','ONLY_FULL_GROUP_BY','NO_UNSIGNED_SUBTRACTION','NO_DIR_IN_CREATE','NOT_USED_9','NOT_USED_10','NOT_USED_11','NOT_USED_12','NOT_USED_13','NOT_USED_14','NOT_USED_15','NOT_USED_16','NOT_USED_17','NOT_USED_18','ANSI','NO_AUTO_VALUE_ON_ZERO','NO_BACKSLASH_ESCAPES','STRICT_TRANS_TABLES','STRICT_ALL_TABLES','NO_ZERO_IN_DATE','NO_ZERO_DATE','ALLOW_INVALID_DATES','ERROR_FOR_DIVISION_BY_ZERO','TRADITIONAL','NOT_USED_29','HIGH_NOT_PRECEDENCE','NO_ENGINE_SUBSTITUTION','PAD_CHAR_TO_FULL_LENGTH','TIME_TRUNCATE_FRACTIONAL') | NO   |     | NULL    |       |
+| ROUTINE_COMMENT          | text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | NO   |     | NULL    |       |
+| DEFINER                  | varchar(93)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
+| CHARACTER_SET_CLIENT     | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
+| COLLATION_CONNECTION     | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
+| DATABASE_COLLATION       | varchar(64)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | NO   |     | NULL    |       |
++--------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+-----+---------+-------+
+31 rows in set (0.03 sec)
+
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE from ROUTINES where ROUTINE_SCHEMA='demo';
++--------------+--------------+--------------+
+| ROUTINE_NAME | ROUTINE_BODY | ROUTINE_TYPE |
++--------------+--------------+--------------+
+| pro1         | SQL          | PROCEDURE    |
+| pro2         | SQL          | PROCEDURE    |
+| pro3         | SQL          | PROCEDURE    |
++--------------+--------------+--------------+
+3 rows in set (0.00 sec)
+
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE,ROUTINE_DEFINITION from ROUTINES where ROUTINE_SCHEMA='demo';
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+| ROUTINE_NAME | ROUTINE_BODY | ROUTINE_TYPE | ROUTINE_DEFINITION                                                                                          |
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+| pro1         | SQL          | PROCEDURE    | begin
+        select "Hello World" as "Message Window";
+end                                                        |
+| pro2         | SQL          | PROCEDURE    | begin
+        select x + y + z;
+end                                                                                |
+| pro3         | SQL          | PROCEDURE    | begin
+        insert into dept values(P1, P2, P3, P4);
+        select "Data inserted SUCCESSFUL" as "Message Window";
+end |
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+3 rows in set (0.00 sec)
+
+mysql> desc detp;
+ERROR 1109 (42S02): Unknown table 'DETP' in information_schema
+mysql> desc dept;
+ERROR 1109 (42S02): Unknown table 'DEPT' in information_schema
+mysql> use demo;
+Database changed
+mysql> desc dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   | PRI | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'declare x int;
+        set x:=100;
+        if x = 100 THEN
+                select "Good";
+        ELSE
+                select "ba' at line 2
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.17 sec)
+
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE,ROUTINE_DEFINITION from ROUTINES where ROUTINE_SCHEMA='demo';
+ERROR 1146 (42S02): Table 'demo.routines' doesn't exist
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE,ROUTINE_DEFINITION from information_schema.ROUTINES where ROUTINE_SCHEMA='demo';
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+| ROUTINE_NAME | ROUTINE_BODY | ROUTINE_TYPE | ROUTINE_DEFINITION                                                                                          |
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+| pro1         | SQL          | PROCEDURE    | begin
+        select "Hello World" as "Message Window";
+end                                                        |
+| pro2         | SQL          | PROCEDURE    | begin
+        select x + y + z;
+end                                                                                |
+| pro3         | SQL          | PROCEDURE    | begin
+        insert into dept values(P1, P2, P3, P4);
+        select "Data inserted SUCCESSFUL" as "Message Window";
+end |
+| pro4         | SQL          | PROCEDURE    | begin
+        declare x int;
+        set x:=100;
+        if x = 100 THEN
+                select "Good";
+        ELSE
+                select "bad";
+        end if;
+end     |
++--------------+--------------+--------------+-------------------------------------------------------------------------------------------------------------+
+4 rows in set (0.00 sec)
+
+mysql> call pro5()
+    -> ;
+ERROR 1305 (42000): PROCEDURE demo.pro5 does not exist
+mysql> call pro4()
+    -> ;
++------+
+| Good |
++------+
+| Good |
++------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> call pro4();
++-----+
+| bad |
++-----+
+| bad |
++-----+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro5(41, 'zzz','baroda','ddd');
++----------------+
+| Message Window |
++----------------+
+| Invalid city   |
++----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro5(41, 'zzz','pune','ddd');
++--------------------------+
+| Message Window           |
++--------------------------+
+| Data inserted SUCCESSFUL |
++--------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | zzz        | pune     | ddd        |
++--------+------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.12 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> call pro6(10);
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     3 | ruhan  | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7415 | AARAV  | CLERK     | 7902 | 1981-12-31 |  3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS | CLERK     | 7920 | 1981-07-19 |  1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 |  1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
++-------+--------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+7 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+ERROR 1313 (42000): RETURN is only allowed in a FUNCTION
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> call pro7(5,6);
++------+
+| x    |
++------+
+|   11 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> set @a :=0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro7(5, 6, @a);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @a;
++------+
+| @a   |
++------+
+|   11 |
++------+
+1 row in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> set @a := 0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> set @b := 0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro8(10, 4, @a, @b);
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @a, @b;
++------+------+
+| @a   | @b   |
++------+------+
+|   14 |    6 |
++------+------+
+1 row in set (0.00 sec)
+
+mysql> desc x;
+ERROR 1146 (42S02): Table 'demo.x' doesn't exist
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> call pro9();
+Query OK, 1 row affected (0.37 sec)
+
+mysql> desc x;
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| c1    | int(11) | YES  |     | NULL    |       |
+| c2    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from x;
++------+------+
+| c1   | c2   |
++------+------+
+|    1 |    1 |
++------+------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql>
+mysql> select extract(day from now());
++-------------------------+
+| extract(day from now()) |
++-------------------------+
+|                      10 |
++-------------------------+
+1 row in set (0.02 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.20 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro9();
++------+
+| x    |
++------+
+|   10 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from emp where 1=2;
+Empty set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> desc e1;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int(11)     | NO   |     | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int(11)     | YES  |     | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| DEPTNO    | int(11)     | NO   |     | NULL    |       |
+| BONUSID   | int(11)     | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| phone     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+13 rows in set (0.01 sec)
+
+mysql> drop table e1;
+Query OK, 0 rows affected (0.38 sec)
+
+mysql> desc e1;
+ERROR 1146 (42S02): Table 'demo.e1' doesn't exist
+mysql>
+mysql>
+mysql> call pro9();
+Query OK, 23 rows affected (0.67 sec)
+
+mysql> select * from e1;
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+| EMPNO | ENAME   | JOB       | MGR  | HIREDATE   | sal   | COMM | DEPTNO | BONUSID | USER NAME | PWD  | phone | isActive |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+|     1 | saleel  | manager   | 7788 | 2021-12-09 |    -1 |   -1 |     10 |      -1 | saleel    | ddd  | 1234  |        1 |
+|     2 | sharmin | manager   | 7788 | NULL       | 45000 | NULL |     20 |    NULL | NULL      | NULL | NULL  |        1 |
+|     3 | ruhan   | manager   | 7788 | NULL       | 15000 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        1 |
+|  7369 | SMITH   | CLERK     | 7902 | 1980-12-17 |   800 | NULL |     20 |       2 | NULL      | NULL | NULL  |        0 |
+|  7415 | AARAV   | CLERK     | 7902 | 1981-12-31 |  3350 | NULL |     10 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7421 | THOMAS  | CLERK     | 7920 | 1981-07-19 |  1750 | NULL |     10 |       1 | NULL      | NULL | NULL  |        0 |
+|  7499 | ALLEN   | SALESMAN  | 7698 | 1981-02-20 |  1600 |  300 |     30 |       4 | NULL      | NULL | NULL  |        1 |
+|  7521 | WARD    | SALESMAN  | 7698 | 1981-02-22 |  1250 |  500 |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7566 | JONES   | MANAGER   | 7839 | 1981-04-02 |  2975 | NULL |     20 |       4 | NULL      | NULL | NULL  |        1 |
+|  7654 | MARTIN  | SALESMAN  | 7698 | 1981-09-28 |  1250 | 1400 |     30 |       6 | NULL      | NULL | NULL  |        1 |
+|  7698 | BLAKE   | MANAGER   | 7839 | 1981-05-01 |  2850 | NULL |     30 |       1 | NULL      | NULL | NULL  |        1 |
+|  7782 | CLARK   | MANAGER   | 7839 | 1981-06-09 |  2450 | NULL |     10 |       3 | NULL      | NULL | NULL  |        1 |
+|  7788 | SCOTT   | ANALYST   | 7566 | 1982-12-09 |  3000 | NULL |     20 |       3 | NULL      | NULL | NULL  |        1 |
+|  7839 | KING    | PRESIDENT | NULL | 1981-11-17 |  5000 | NULL |     10 |       1 | NULL      | NULL | NULL  |        1 |
+|  7844 | TURNER  | SALESMAN  | 7698 | 1981-09-08 |  1500 |    0 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7876 | ADAMS   | CLERK     | 7788 | 1983-01-12 |  1100 | NULL |     20 |       1 | NULL      | NULL | NULL  |        1 |
+|  7900 | JAMES   | CLERK     | 7698 | 1981-12-03 |   950 | NULL |     30 |       2 | NULL      | NULL | NULL  |        1 |
+|  7902 | FORD    | ANALYST   | 7566 | 1981-12-03 |  3000 | NULL |     20 |       4 | NULL      | NULL | NULL  |        0 |
+|  7919 | HOFFMAN | MANAGER   | 7566 | 1982-03-24 |  4150 | NULL |     30 |       3 | NULL      | NULL | NULL  |        1 |
+|  7920 | GRASS   | SALESMAN  | 7919 | 1980-02-14 |  2575 | 2700 |     30 |       5 | NULL      | NULL | NULL  |        1 |
+|  7934 | MILLER  | CLERK     | 7782 | 1982-01-23 |  1300 | NULL |     10 |       2 | NULL      | NULL | NULL  |        0 |
+|  7945 | AARUSH  | SALESMAN  | 7902 | 1980-02-14 |  1350 | 2700 |     30 |    NULL | NULL      | NULL | NULL  |        0 |
+|  7949 | ALEX    | MANAGER   | 7698 | 1982-01-24 |  1250 |  500 |     30 |       5 | NULL      | NULL | NULL  |        1 |
++-------+---------+-----------+------+------------+-------+------+--------+---------+-----------+------+-------+----------+
+23 rows in set (0.00 sec)
+
+mysql> drop table e1;
+Query OK, 0 rows affected (0.42 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.14 sec)
+
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> call pro9();
+Query OK, 0 rows affected (0.54 sec)
+
+mysql> select * from e1;
+Empty set (0.00 sec)
+
+mysql> desc e1;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int(11)     | NO   |     | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int(11)     | YES  |     | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| DEPTNO    | int(11)     | NO   |     | NULL    |
+      |
+| BONUSID   | int(11)     | YES  |     | NULL    |
+      |
+| USER NAME | varchar(20) | YES  |     | NULL    |
+      |
+| PWD       | varchar(20) | YES  |     | NULL    |
+      |
+| phone     | varchar(45) | YES  |     | NULL    |
+      |
+| isActive  | tinyint(1)  | YES  |     | NULL    |
+      |
++-----------+-------------+------+-----+---------+-------+
+13 rows in set (0.01 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro10();
+Query OK, 0 rows affected (0.49 sec)
+
+mysql> desc e2;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| EMPNO     | int(11)     | NO   |     | NULL    |       |
+| ENAME     | varchar(12) | YES  |     | NULL    |       |
+| JOB       | varchar(20) | YES  |     | NULL    |       |
+| MGR       | int(11)     | YES  |     | NULL    |       |
+| HIREDATE  | date        | YES  |     | NULL    |       |
+| sal       | int(11)     | YES  |     | NULL    |       |
+| COMM      | int(11)     | YES  |     | NULL    |       |
+| DEPTNO    | int(11)     | NO   |     | NULL    |       |
+| BONUSID   | int(11)     | YES  |     | NULL    |       |
+| USER NAME | varchar(20) | YES  |     | NULL    |       |
+| PWD       | varchar(20) | YES  |     | NULL    |       |
+| phone     | varchar(45) | YES  |     | NULL    |       |
+| isActive  | tinyint(1)  | YES  |     | NULL    |
+      |
++-----------+-------------+------+-----+---------+-------+
+13 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro11();'
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | zzz        | pune     | ddd        |
++--------+------------+----------+------------+
+5 rows in set (0.02 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+    '> ^C
+mysql> ^C
+mysql> ^C
+mysql> ^C
+mysql> source abc.sql
+ERROR:
+Failed to open file 'abc.sql', error: 2
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> call pro12();
+ERROR 1318 (42000): Incorrect number of arguments for PROCEDURE demo.pro12; expected 2, got 0
+mysql> call pro12("dname", "dept");
++-------------------------+
+| @x1                     |
++-------------------------+
+| select col from tblname |
++-------------------------+
+1 row in set (0.00 sec)
+
++--------------------------------+
+| repeat('-', 30)                |
++--------------------------------+
+| ------------------------------ |
++--------------------------------+
+1 row in set (0.02 sec)
+
++------------------------+
+| @x2                    |
++------------------------+
+| select dname from dept |
++------------------------+
+1 row in set (0.02 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql>  select dname from dept;
++------------+
+| dname      |
++------------+
+| ACCOUNTING |
+| RESEARCH   |
+| SALES      |
+| OPERATIONS |
+| zzz        |
++------------+
+5 rows in set (0.00 sec)
+
+mysql> select col from tblname;
+ERROR 1146 (42S02): Table 'demo.tblname' doesn't exist
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> call pro12("ename", "emp");
++---------+
+| ename   |
++---------+
+| saleel  |
+| sharmin |
+| ruhan   |
+| SMITH   |
+| AARAV   |
+| THOMAS  |
+| ALLEN   |
+| WARD    |
+| JONES   |
+| MARTIN  |
+| BLAKE   |
+| CLARK   |
+| SCOTT   |
+| KING    |
+| TURNER  |
+| ADAMS   |
+| JAMES   |
+| FORD    |
+| HOFFMAN |
+| GRASS   |
+| MILLER  |
+| AARUSH  |
+| ALEX    |
++---------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro12("dname", "dept");
++------------+
+| dname      |
++------------+
+| ACCOUNTING |
+| RESEARCH   |
+| SALES      |
+| OPERATIONS |
+| zzz        |
++------------+
+5 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro12("sal", "emp");
++-------+
+| sal   |
++-------+
+|    -1 |
+| 45000 |
+| 15000 |
+|   800 |
+|  3350 |
+|  1750 |
+|  1600 |
+|  1250 |
+|  2975 |
+|  1250 |
+|  2850 |
+|  2450 |
+|  3000 |
+|  5000 |
+|  1500 |
+|  1100 |
+|   950 |
+|  3000 |
+|  4150 |
+|  2575 |
+|  1300 |
+|  1350 |
+|  1250 |
++-------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro12("ename, job, sal", "emp");
++---------+-----------+-------+
+| ename   | job       | sal   |
++---------+-----------+-------+
+| saleel  | manager   |    -1 |
+| sharmin | manager   | 45000 |
+| ruhan   | manager   | 15000 |
+| SMITH   | CLERK     |   800 |
+| AARAV   | CLERK     |  3350 |
+| THOMAS  | CLERK     |  1750 |
+| ALLEN   | SALESMAN  |  1600 |
+| WARD    | SALESMAN  |  1250 |
+| JONES   | MANAGER   |  2975 |
+| MARTIN  | SALESMAN  |  1250 |
+| BLAKE   | MANAGER   |  2850 |
+| CLARK   | MANAGER   |  2450 |
+| SCOTT   | ANALYST   |  3000 |
+| KING    | PRESIDENT |  5000 |
+| TURNER  | SALESMAN  |  1500 |
+| ADAMS   | CLERK     |  1100 |
+| JAMES   | CLERK     |   950 |
+| FORD    | ANALYST   |  3000 |
+| HOFFMAN | MANAGER   |  4150 |
+| GRASS   | SALESMAN  |  2575 |
+| MILLER  | CLERK     |  1300 |
+| AARUSH  | SALESMAN  |  1350 |
+| ALEX    | MANAGER   |  1250 |
++---------+-----------+-------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro12("ename", "emp");
++-----------------------+
+| @x                    |
++-----------------------+
+| select ename from emp |
++-----------------------+
+1 row in set (0.00 sec)
+
++---------+
+| ename   |
++---------+
+| saleel  |
+| sharmin |
+| ruhan   |
+| SMITH   |
+| AARAV   |
+| THOMAS  |
+| ALLEN   |
+| WARD    |
+| JONES   |
+| MARTIN  |
+| BLAKE   |
+| CLARK   |
+| SCOTT   |
+| KING    |
+| TURNER  |
+| ADAMS   |
+| JAMES   |
+| FORD    |
+| HOFFMAN |
+| GRASS   |
+| MILLER  |
+| AARUSH  |
+| ALEX    |
++---------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call pro12("ename, job, sal", "emp");
++---------------------------------+
+| @x                              |
++---------------------------------+
+| select ename, job, sal from emp |
++---------------------------------+
+1 row in set (0.00 sec)
+
++---------+-----------+-------+
+| ename   | job       | sal   |
++---------+-----------+-------+
+| saleel  | manager   |    -1 |
+| sharmin | manager   | 45000 |
+| ruhan   | manager   | 15000 |
+| SMITH   | CLERK     |   800 |
+| AARAV   | CLERK     |  3350 |
+| THOMAS  | CLERK     |  1750 |
+| ALLEN   | SALESMAN  |  1600 |
+| WARD    | SALESMAN  |  1250 |
+| JONES   | MANAGER   |  2975 |
+| MARTIN  | SALESMAN  |  1250 |
+| BLAKE   | MANAGER   |  2850 |
+| CLARK   | MANAGER   |  2450 |
+| SCOTT   | ANALYST   |  3000 |
+| KING    | PRESIDENT |  5000 |
+| TURNER  | SALESMAN  |  1500 |
+| ADAMS   | CLERK     |  1100 |
+| JAMES   | CLERK     |   950 |
+| FORD    | ANALYST   |  3000 |
+| HOFFMAN | MANAGER   |  4150 |
+| GRASS   | SALESMAN  |  2575 |
+| MILLER  | CLERK     |  1300 |
+| AARUSH  | SALESMAN  |  1350 |
+| ALEX    | MANAGER   |  1250 |
++---------+-----------+-------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> call pro12("ename, dname", "emp, dept where emp.deptno=dept.deptno");
+ERROR 1406 (22001): Data too long for column 'tblname' at row 1
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> call pro12("ename, dname", "emp, dept where emp.deptno=dept.deptno");
++-----------------------------------------------------------------+
+| @x                                                              |
++-----------------------------------------------------------------+
+| select ename, dname from emp, dept where emp.deptno=dept.deptno |
++-----------------------------------------------------------------+
+1 row in set (0.00 sec)
+
++---------+------------+
+| ename   | dname      |
++---------+------------+
+| saleel  | ACCOUNTING |
+| ruhan   | ACCOUNTING |
+| AARAV   | ACCOUNTING |
+| THOMAS  | ACCOUNTING |
+| CLARK   | ACCOUNTING |
+| KING    | ACCOUNTING |
+| MILLER  | ACCOUNTING |
+| sharmin | RESEARCH   |
+| SMITH   | RESEARCH   |
+| JONES   | RESEARCH   |
+| SCOTT   | RESEARCH   |
+| ADAMS   | RESEARCH   |
+| FORD    | RESEARCH   |
+| ALLEN   | SALES      |
+| WARD    | SALES      |
+| MARTIN  | SALES      |
+| BLAKE   | SALES      |
+| TURNER  | SALES      |
+| JAMES   | SALES      |
+| HOFFMAN | SALES      |
+| GRASS   | SALES      |
+| AARUSH  | SALES      |
+| ALEX    | SALES      |
++---------+------------+
+23 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> call pro12("ename, job, sal", "emp order by sal desc");
++---------------------------------------------------+
+| @x                                                |
++---------------------------------------------------+
+| select ename, job, sal from emp order by sal desc |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
++---------+-----------+-------+
+| ename   | job       | sal   |
++---------+-----------+-------+
+| sharmin | manager   | 45000 |
+| ruhan   | manager   | 15000 |
+| KING    | PRESIDENT |  5000 |
+| HOFFMAN | MANAGER   |  4150 |
+| AARAV   | CLERK     |  3350 |
+| SCOTT   | ANALYST   |  3000 |
+| FORD    | ANALYST   |  3000 |
+| JONES   | MANAGER   |  2975 |
+| BLAKE   | MANAGER   |  2850 |
+| GRASS   | SALESMAN  |  2575 |
+| CLARK   | MANAGER   |  2450 |
+| THOMAS  | CLERK     |  1750 |
+| ALLEN   | SALESMAN  |  1600 |
+| TURNER  | SALESMAN  |  1500 |
+| AARUSH  | SALESMAN  |  1350 |
+| MILLER  | CLERK     |  1300 |
+| WARD    | SALESMAN  |  1250 |
+| MARTIN  | SALESMAN  |  1250 |
+| ALEX    | MANAGER   |  1250 |
+| ADAMS   | CLERK     |  1100 |
+| JAMES   | CLERK     |   950 |
+| SMITH   | CLERK     |   800 |
+| saleel  | manager   |    -1 |
++---------+-----------+-------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE,ROUTINE_DEFINITION from information_schema.ROUTINES where ROUTINE_SCHEMA='demo';
++--------------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ROUTINE_NAME | ROUTINE_BODY | ROUTINE_TYPE | ROUTINE_DEFINITION                                                                                                                                                                             |
++--------------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pro1         | SQL          | PROCEDURE    | begin
+        select "Hello World" as "Message Window";
+end                                                                                                                                           |
+| pro10        | SQL          | PROCEDURE    | begin
+
+        if (select extract(day from now())) = 10 then
+                create table e2 as select * from emp where 1=2;
+        ELSE
+                select "not good";
+        END IF;
+
+end                                              |
+| pro11        | SQL          | PROCEDURE    | begin
+        SET @x = "select * from dept";
+        prepare a FROM @x;
+        execute a;
+end                                                                                                                      |
+| pro12        | SQL          | PROCEDURE    | begin
+        SET @x := concat ("select ", col, " from ", tblname);
+        select @x;
+
+        prepare stmt from @x;
+        EXECUTE stmt;
+end                                                                            |
+| pro2         | SQL          | PROCEDURE    | begin
+        select x + y + z;
+end                                                                                                                                                                   |
+| pro3         | SQL          | PROCEDURE    | begin
+        insert into dept values(P1, P2, P3, P4);
+        select "Data inserted SUCCESSFUL" as "Message Window";
+end                                                                                    |
+| pro4         | SQL          | PROCEDURE    | begin
+        declare x int;
+        set x:=1001;
+        if x = 100 THEN
+                select "Good";
+        ELSE
+                select "bad";
+        end if;
+end                                                                                       |
+| pro5         | SQL          | PROCEDURE    | begin
+        if P3 = 'Pune' THEN
+                insert into dept values(P1, P2, P3, P4);
+                select "Data inserted SUCCESSFUL" as "Message Window";
+        ELSE
+                select "Invalid city" as "Message Window";
+        end if;
+end |
+| pro6         | SQL          | PROCEDURE    | begin
+        select * from emp where deptno = P1;
+end                                                                                                                                                |
+| pro7         | SQL          | PROCEDURE    | begin
+        declare x int;
+        SET x := P1 + P2;
+
+        SET P3 := x;
+
+end                                                                                                                                 |
+| pro8         | SQL          | PROCEDURE    | begin
+        SET P3 := P1 + P2;
+        SET P4 := P1 - P2;
+
+end                                                                                                                                            |
+| pro9         | SQL          | PROCEDURE    | begin
+        declare x int;
+        set x := (select extract(day from now()));
+
+        if x = 10 then
+                create table e1 as select * from emp where 1=2;
+        ELSE
+                select "not good";
+        END IF;
+
+end                |
++--------------+--------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+12 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+ERROR 1415 (0A000): Not allowed to return a result set from a function
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+mysql>
+mysql>
+mysql> show global variables like 'log_bin_trust_function_creators%';
++---------------------------------+-------+
+| Variable_name                   | Value |
++---------------------------------+-------+
+| log_bin_trust_function_creators | OFF   |
++---------------------------------+-------+
+1 row in set (0.10 sec)
+
+mysql> set global log_bin_trust_function_creators= 1;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show global variables like 'log_bin_trust_function_creators%';
++---------------------------------+-------+
+| Variable_name                   | Value |
++---------------------------------+-------+
+| log_bin_trust_function_creators | ON    |
++---------------------------------+-------+
+1 row in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select length('saleel');
++------------------+
+| length('saleel') |
++------------------+
+|                6 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel');
++------------------+
+| length('saleel') |
++------------------+
+|                6 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel');
++------------------+
+| length('saleel') |
++------------------+
+|                6 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel bagde');
++------------------------+
+| length('saleel bagde') |
++------------------------+
+|                     12 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel bagde');
++------------------------+
+| length('saleel bagde') |
++------------------------+
+|                     12 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel bagde'), rand();
++------------------------+--------------------+
+| length('saleel bagde') | rand()             |
++------------------------+--------------------+
+|                     12 | 0.6186275012964639 |
++------------------------+--------------------+
+1 row in set (0.03 sec)
+
+mysql> select length('saleel'), rand();
++------------------+--------------------+
+| length('saleel') | rand()             |
++------------------+--------------------+
+|                6 | 0.6763409922610418 |
++------------------+--------------------+
+1 row in set (0.00 sec)
+
+mysql> select length('saleel'), rand();
++------------------+--------------------+
+| length('saleel') | rand()             |
++------------------+--------------------+
+|                6 | 0.5258224881494628 |
++------------------+--------------------+
+1 row in set (0.00 sec)
+
+mysql> select length(ename), rand() from emp;
++---------------+---------------------+
+| length(ename) | rand()              |
++---------------+---------------------+
+|             6 |   0.600089494697833 |
+|             7 |  0.4229800397744216 |
+|             5 |  0.3146317455122543 |
+|             5 |  0.3042186389716516 |
+|             5 |    0.57719798905514 |
+|             6 |    0.97333405909439 |
+|             5 | 0.13507635904017498 |
+|             4 |    0.75537964865135 |
+|             5 |  0.3716691968698699 |
+|             6 |  0.5922070691289446 |
+|             5 |  0.8460277857687583 |
+|             5 |  0.4535177521906027 |
+|             5 |  0.7295054343803836 |
+|             4 | 0.28697394606375504 |
+|             6 | 0.24635345791126922 |
+|             5 |  0.3708454820987261 |
+|             5 | 0.11516706749346765 |
+|             4 | 0.46329892190480504 |
+|             7 |  0.9709934377772672 |
+|             5 | 0.46507045390556606 |
+|             6 |  0.4123719869296737 |
+|             6 |  0.6666486036653152 |
+|             4 | 0.09612708827119981 |
++---------------+---------------------+
+23 rows in set (0.00 sec)
+
+mysql> select ename ,length(ename), rand() from emp;
++---------+---------------+---------------------+
+| ename   | length(ename) | rand()              |
++---------+---------------+---------------------+
+| saleel  |             6 |  0.4806896610936985 |
+| sharmin |             7 | 0.11506707138853806 |
+| ruhan   |             5 | 0.13326640439523982 |
+| SMITH   |             5 |  0.3211308385442298 |
+| AARAV   |             5 |  0.2058550102690747 |
+| THOMAS  |             6 | 0.06588256644632906 |
+| ALLEN   |             5 |  0.7118478321580661 |
+| WARD    |             4 |  0.3615914921849887 |
+| JONES   |             5 |  0.6724139951843898 |
+| MARTIN  |             6 |  0.2772955301006283 |
+| BLAKE   |             5 | 0.36923569568361686 |
+| CLARK   |             5 | 0.01429191884984441 |
+| SCOTT   |             5 |  0.9637525379320164 |
+| KING    |             4 |  0.7758869638441941 |
+| TURNER  |             6 |  0.9881772361585658 |
+| ADAMS   |             5 |  0.6132253199938921 |
+| JAMES   |             5 | 0.10159492222740774 |
+| FORD    |             4 |  0.6682986818890075 |
+| HOFFMAN |             7 | 0.03670867349645931 |
+| GRASS   |             5 |   0.178647352548919 |
+| MILLER  |             6 |  0.7831107729888621 |
+| AARUSH  |             6 |  0.3796118380311987 |
+| ALEX    |             4 |   0.548726901923052 |
++---------+---------------+---------------------+
+23 rows in set (0.00 sec)
+
+mysql> select ename ,length(ename), rand() from emp;
++---------+---------------+---------------------+
+| ename   | length(ename) | rand()              |
++---------+---------------+---------------------+
+| saleel  |             6 |  0.6047990262553087 |
+| sharmin |             7 | 0.37781445624103255 |
+| ruhan   |             5 | 0.07467523317288163 |
+| SMITH   |             5 | 0.23993282787495557 |
+| AARAV   |             5 |  0.9756384705897779 |
+| THOMAS  |             6 | 0.15839390005766776 |
+| ALLEN   |             5 |  0.8650541192526502 |
+| WARD    |             4 |  0.8500889268238926 |
+| JONES   |             5 |  0.6552823070951572 |
+| MARTIN  |             6 |  0.7261447857377537 |
+| BLAKE   |             5 |  0.6648770381369414 |
+| CLARK   |             5 | 0.14595086420509112 |
+| SCOTT   |             5 |  0.7351232373482764 |
+| KING    |             4 | 0.23776362485975364 |
+| TURNER  |             6 |  0.9834484429875839 |
+| ADAMS   |             5 |   0.203951371092304 |
+| JAMES   |             5 | 0.06941155723241303 |
+| FORD    |             4 |  0.7352037036187982 |
+| HOFFMAN |             7 | 0.46778387713039654 |
+| GRASS   |             5 | 0.13330830552923334 |
+| MILLER  |             6 |  0.2631899269886221 |
+| AARUSH  |             6 |  0.9160247490890555 |
+| ALEX    |             4 |   0.790553995213056 |
++---------+---------------+---------------------+
+23 rows in set (0.00 sec)
+
+mysql> set global log_bin_trust_function_creators= 1;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> set global log_bin_trust_function_creators= 0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.13 sec)
+
+ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+mysql>
+mysql>
+mysql>
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> call f1();
+ERROR 1305 (42000): PROCEDURE demo.f1 does not exist
+mysql> select f1();
++-------------+
+| f1()        |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select f1() R1;
++-------------+
+| R1          |
++-------------+
+| Hello World |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.15 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> select f1();
++--------+
+| f1()   |
++--------+
+| Hello  |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select f1() R1;
++--------+
+| R1     |
++--------+
+| Hello  |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select f1() R1, ename from emp;
++--------+---------+
+| R1     | ename   |
++--------+---------+
+| Hello  | saleel  |
+| Hello  | sharmin |
+| Hello  | ruhan   |
+| Hello  | SMITH   |
+| Hello  | AARAV   |
+| Hello  | THOMAS  |
+| Hello  | ALLEN   |
+| Hello  | WARD    |
+| Hello  | JONES   |
+| Hello  | MARTIN  |
+| Hello  | BLAKE   |
+| Hello  | CLARK   |
+| Hello  | SCOTT   |
+| Hello  | KING    |
+| Hello  | TURNER  |
+| Hello  | ADAMS   |
+| Hello  | JAMES   |
+| Hello  | FORD    |
+| Hello  | HOFFMAN |
+| Hello  | GRASS   |
+| Hello  | MILLER  |
+| Hello  | AARUSH  |
+| Hello  | ALEX    |
++--------+---------+
+23 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select f1();
+ERROR 1366 (HY000): Incorrect integer value: 'Hello ' for column 'f1()' at row 1
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select f2(1, 5);
++----------+
+| f2(1, 5) |
++----------+
+|        6 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select f2(4, 5);
++----------+
+| f2(4, 5) |
++----------+
+|        9 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select sal, comm, f2(sal, comm) R1 from emp;
++-------+------+------+
+| sal   | comm | R1   |
++-------+------+------+
+|    -1 |   -1 |   -2 |
+| 45000 | NULL | NULL |
+| 15000 | NULL | NULL |
+|   800 | NULL | NULL |
+|  3350 | NULL | NULL |
+|  1750 | NULL | NULL |
+|  1600 |  300 | 1900 |
+|  1250 |  500 | 1750 |
+|  2975 | NULL | NULL |
+|  1250 | 1400 | 2650 |
+|  2850 | NULL | NULL |
+|  2450 | NULL | NULL |
+|  3000 | NULL | NULL |
+|  5000 | NULL | NULL |
+|  1500 |    0 | 1500 |
+|  1100 | NULL | NULL |
+|   950 | NULL | NULL |
+|  3000 | NULL | NULL |
+|  4150 | NULL | NULL |
+|  2575 | 2700 | 5275 |
+|  1300 | NULL | NULL |
+|  1350 | 2700 | 4050 |
+|  1250 |  500 | 1750 |
++-------+------+------+
+23 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select sal, comm, f2(sal, comm) R1 from emp;
++-------+------+-------+
+| sal   | comm | R1    |
++-------+------+-------+
+|    -1 |   -1 |    -2 |
+| 45000 | NULL | 45000 |
+| 15000 | NULL | 15000 |
+|   800 | NULL |   800 |
+|  3350 | NULL |  3350 |
+|  1750 | NULL |  1750 |
+|  1600 |  300 |  1900 |
+|  1250 |  500 |  1750 |
+|  2975 | NULL |  2975 |
+|  1250 | 1400 |  2650 |
+|  2850 | NULL |  2850 |
+|  2450 | NULL |  2450 |
+|  3000 | NULL |  3000 |
+|  5000 | NULL |  5000 |
+|  1500 |    0 |  1500 |
+|  1100 | NULL |  1100 |
+|   950 | NULL |   950 |
+|  3000 | NULL |  3000 |
+|  4150 | NULL |  4150 |
+|  2575 | 2700 |  5275 |
+|  1300 | NULL |  1300 |
+|  1350 | 2700 |  4050 |
+|  1250 |  500 |  1750 |
++-------+------+-------+
+23 rows in set (0.00 sec)
+
+mysql> select sal, f2(sal, 1000) R1 from emp;
++-------+-------+
+| sal   | R1    |
++-------+-------+
+|    -1 |   999 |
+| 45000 | 46000 |
+| 15000 | 16000 |
+|   800 |  1800 |
+|  3350 |  4350 |
+|  1750 |  2750 |
+|  1600 |  2600 |
+|  1250 |  2250 |
+|  2975 |  3975 |
+|  1250 |  2250 |
+|  2850 |  3850 |
+|  2450 |  3450 |
+|  3000 |  4000 |
+|  5000 |  6000 |
+|  1500 |  2500 |
+|  1100 |  2100 |
+|   950 |  1950 |
+|  3000 |  4000 |
+|  4150 |  5150 |
+|  2575 |  3575 |
+|  1300 |  2300 |
+|  1350 |  2350 |
+|  1250 |  2250 |
++-------+-------+
+23 rows in set (0.00 sec)
+
+mysql> select sal, f2(sal, null) R1 from emp;
++-------+-------+
+| sal   | R1    |
++-------+-------+
+|    -1 |    -1 |
+| 45000 | 45000 |
+| 15000 | 15000 |
+|   800 |   800 |
+|  3350 |  3350 |
+|  1750 |  1750 |
+|  1600 |  1600 |
+|  1250 |  1250 |
+|  2975 |  2975 |
+|  1250 |  1250 |
+|  2850 |  2850 |
+|  2450 |  2450 |
+|  3000 |  3000 |
+|  5000 |  5000 |
+|  1500 |  1500 |
+|  1100 |  1100 |
+|   950 |   950 |
+|  3000 |  3000 |
+|  4150 |  4150 |
+|  2575 |  2575 |
+|  1300 |  1300 |
+|  1350 |  1350 |
+|  1250 |  1250 |
++-------+-------+
+23 rows in set (0.00 sec)
+
+mysql> select empno from mep;
+ERROR 1146 (42S02): Table 'demo.mep' doesn't exist
+mysql> select empno from emp;
++-------+
+| empno |
++-------+
+|  7369 |
+|  7415 |
+|  7421 |
+|  7902 |
+|  7934 |
+|  7945 |
+|     1 |
+|     2 |
+|     3 |
+|  7499 |
+|  7521 |
+|  7566 |
+|  7654 |
+|  7698 |
+|  7782 |
+|  7788 |
+|  7839 |
+|  7844 |
+|  7876 |
+|  7900 |
+|  7919 |
+|  7920 |
+|  7949 |
++-------+
+23 rows in set (0.01 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.03 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro13();
+ERROR 1318 (42000): Incorrect number of arguments for PROCEDURE demo.pro13; expected 1, got 0
+mysql>
+mysql>
+mysql> call pro13(7788);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.11 sec)
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select x;
+
+
+end' at line 5
+mysql> source d:\abc.sql
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro13(7788);
+ERROR 1264 (22003): Out of range value for column 'x' at row 1
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> call pro13(7788);
++------+
+| x    |
++------+
+|  125 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro13(7788);
++------+
+| x    |
++------+
+|    1 |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro13(77881);
++------+
+| x    |
++------+
+| NULL |
++------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> call pro13(7788);
+ERROR 1318 (42000): Incorrect number of arguments for FUNCTION demo.f1; expected 0, got 2
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call pro13(7788);
++---------------+
+| F2(sal, comm) |
++---------------+
+|            -2 |
+|         45000 |
+|         15000 |
+|           800 |
+|          3350 |
+|          1750 |
+|          1900 |
+|          1750 |
+|          2975 |
+|          2650 |
+|          2850 |
+|          2450 |
+|          3000 |
+|          5000 |
+|          1500 |
+|          1100 |
+|           950 |
+|          3000 |
+|          4150 |
+|          5275 |
+|          1300 |
+|          4050 |
+|          1750 |
++---------------+
+23 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> source d:\abc.sql
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> call pro13(7788);
++---------------+
+| F2(sal, comm) |
++---------------+
+|          3000 |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro13(-1);
++---------------------+
+| Employee not found! |
++---------------------+
+| Employee not found! |
++---------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql>
+mysql> select ename from emp where emono=-1;
+ERROR 1054 (42S22): Unknown column 'emono' in 'where clause'
+mysql> select ename from emp where empno=-1;
+Empty set (0.00 sec)
+
+mysql> call pro13(-1);
++---------------------+
+| Employee not found! |
++---------------------+
+| Employee not found! |
++---------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro13(7788);
++---------------+
+| F2(sal, comm) |
++---------------+
+|          3000 |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select ROUTINE_NAME, ROUTINE_BODY, ROUTINE_TYPE,ROUTINE_DEFINITION from information_schema.ROUTINES where ROUTINE_SCHEMA='demo';
++--------------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ROUTINE_NAME | ROUTINE_BODY | ROUTINE_TYPE | ROUTINE_DEFINITION                                                                                                                                                                                 |
++--------------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| f1           | SQL          | FUNCTION     | begin
+        declare x varchar(100);
+
+        select "Hello " into x;
+        return x;
+
+end                                                                                                                         |
+| f2           | SQL          | FUNCTION     | begin
+        return ifnull(x,0) + ifnull(y,0);
+end                                                                                                                                                       |
+| pro1         | SQL          | PROCEDURE    | begin
+        select "Hello World" as "Message Window";
+end                                                                                                                                               |
+| pro10        | SQL          | PROCEDURE    | begin
+
+        if (select extract(day from now())) = 10 then
+                create table e2 as select * from emp where 1=2;
+        ELSE
+                select "not good";
+        END IF;
+
+end                                                  |
+| pro11        | SQL          | PROCEDURE    | begin
+        SET @x = "select * from dept";
+        prepare a FROM @x;
+        execute a;
+end                                                                                                                          |
+| pro12        | SQL          | PROCEDURE    | begin
+        SET @x := concat ("select ", col, " from ", tblname);
+        select @x;
+
+        prepare stmt from @x;
+        EXECUTE stmt;
+end                                                                                |
+| pro13        | SQL          | PROCEDURE    | begin
+        declare x bool;
+
+        select true into x from emp where empno = _EMPNO;
+
+        if x THEN
+                select F2(sal, comm) from emp where empno = _EMPNO;
+        ELSE
+                select "Employee not found!";
+        END IF;
+
+end |
+| pro2         | SQL          | PROCEDURE    | begin
+        select x + y + z;
+end                                                                                                                                                                       |
+| pro3         | SQL          | PROCEDURE    | begin
+        insert into dept values(P1, P2, P3, P4);
+        select "Data inserted SUCCESSFUL" as "Message Window";
+end                                                                                        |
+| pro4         | SQL          | PROCEDURE    | begin
+        declare x int;
+        set x:=1001;
+        if x = 100 THEN
+                select "Good";
+        ELSE
+                select "bad";
+        end if;
+end                                                                                           |
+| pro5         | SQL          | PROCEDURE    | begin
+        if P3 = 'Pune' THEN
+                insert into dept values(P1, P2, P3, P4);
+                select "Data inserted SUCCESSFUL" as "Message Window";
+        ELSE
+                select "Invalid city" as "Message Window";
+        end if;
+end     |
+| pro6         | SQL          | PROCEDURE    | begin
+        select * from emp where deptno = P1;
+end                                                                                                                                                    |
+| pro7         | SQL          | PROCEDURE    | begin
+        declare x int;
+        SET x := P1 + P2;
+
+        SET P3 := x;
+
+end                                                                                                                                     |
+| pro8         | SQL          | PROCEDURE    | begin
+        SET P3 := P1 + P2;
+        SET P4 := P1 - P2;
+
+end                                                                                                                                                |
+| pro9         | SQL          | PROCEDURE    | begin
+        declare x int;
+        set x := (select extract(day from now()));
+
+        if x = 10 then
+                create table e1 as select * from emp where 1=2;
+        ELSE
+                select "not good";
+        END IF;
+
+end                    |
++--------------+--------------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+15 rows in set (0.00 sec)
+
+mysql> call pro13(7788);
++---------------+
+| F2(sal, comm) |
++---------------+
+|          3000 |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call pro13(7788);
++---------------+
+| F2(sal, comm) |
++---------------+
+|          3000 |
++---------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | zzz        | pune     | ddd        |
++--------+------------+----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> delete from dept where detpno>40;
+ERROR 1054 (42S22): Unknown column 'detpno' in 'where clause'
+mysql> delete from dept where detpno>40;
+ERROR 1054 (42S22): Unknown column 'detpno' in 'where clause'
+mysql> delete from dept where deptno>40;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> source d:\abc.sql;
+ERROR:
+Unknown command '\a'.
+Query OK, 0 rows affected, 1 warning (0.11 sec)
+
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> source d:\abc.sql;
+ERROR:
+Unknown command '\a'.
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> select f3();
++------+
+| f3() |
++------+
+|   41 |
++------+
+1 row in set (0.01 sec)
+
+mysql> select f3();
++------+
+| f3() |
++------+
+|   41 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select f3();
++------+
+| f3() |
++------+
+|   41 |
++------+
+1 row in set (0.00 sec)
+
+mysql> source d:\abc.sql;
+ERROR:
+Unknown command '\a'.
+Query OK, 0 rows affected (0.13 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> source d:\abc.sql;
+ERROR:
+Unknown command '\a'.
+Query OK, 0 rows affected (0.10 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select f3();
++------+
+| f3() |
++------+
+|   41 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
++--------+------------+----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into dept values(f3(),'a','a','a');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into dept values(f3(),'a','a','a');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into dept values(f3(),'a','a','a');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into dept values(f3(),'a','a','a');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | a          | a        | a          |
+|     42 | a          | a        | a          |
+|     43 | a          | a        | a          |
+|     44 | a          | a        | a          |
++--------+------------+----------+------------+
+8 rows in set (0.00 sec)
+
+mysql> insert into dept values(f3(),'a','a','a');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from dept;
++--------+------------+----------+------------+
+| DEPTNO | DNAME      | LOC      | PWD        |
++--------+------------+----------+------------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  |
+|     30 | SALES      | CHICAGO  | sales@2017 |
+|     40 | OPERATIONS | BOSTON   | opr@123    |
+|     41 | a          | a        | a          |
+|     42 | a          | a        | a          |
+|     43 | a          | a        | a          |
+|     44 | a          | a        | a          |
+|     45 | a          | a        | a          |
++--------+------------+----------+------------+
+9 rows in set (0.00 sec)
+
+mysql> alter table dept add c1 int;
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from dept;
++--------+------------+----------+------------+------+
+| DEPTNO | DNAME      | LOC      | PWD        | c1   |
++--------+------------+----------+------------+------+
+|     10 | ACCOUNTING | NEW YORK | r50mpm     | NULL |
+|     20 | RESEARCH   | DALLAS   | a12recmpm  | NULL |
+|     30 | SALES      | CHICAGO  | sales@2017 | NULL |
+|     40 | OPERATIONS | BOSTON   | opr@123    | NULL |
+|     41 | a          | a        | a          | NULL |
+|     42 | a          | a        | a          | NULL |
+|     43 | a          | a        | a          | NULL |
+|     44 | a          | a        | a          | NULL |
+|     45 | a          | a        | a          | NULL |
++--------+------------+----------+------------+------+
+9 rows in set (0.00 sec)
+
+mysql> desc dept;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | int(11)     | NO   | PRI | NULL    |       |
+| DNAME  | varchar(12) | YES  |     | NULL    |       |
+| LOC    | varchar(10) | YES  |     | NULL    |       |
+| PWD    | varchar(20) | YES  |     | NULL    |       |
+| c1     | int(11)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table dept drop c1;
+Query OK, 0 rows affected (1.22 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> exit
